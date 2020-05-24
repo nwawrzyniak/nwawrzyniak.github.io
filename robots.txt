@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /m/
+Disallow:
 
 Sitemap: https://www.nwawsoft.com/sitemap.xml
