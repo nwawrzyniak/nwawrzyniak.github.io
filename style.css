@@ -1,48 +1,12 @@
 @font-face {
   font-family: "Lucida Grande";
-  src: url("/fonts/Lucida-Grande-Regular-Font.ttf");
+  src: url("/fonts/Lucida-Grande-Regular-Font.ttf") format("truetype");
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
   font-display: swap;
 }
 
-/*
-@media (max-width: 575.98px) {
-  body {
-    background-color: lightblue;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 767.98px) {
-  body {
-    background-color: lightgreen;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991.98px) {
-  body {
-    background-color: lightyellow;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  body {
-    background-color: lightpink;
-  }
-}
-
-@media (min-width: 1200px) {
-  body {
-    background-color: lightcoral;
-  }
-}
-*/
-
 :root {
-  /* Grayscale */
-  --black: #000000;
-  --white: #FFFFFF;
-
   /* General corporate identity settings */
   --identity-color-1: #116615;
   --identity-color-2: #0050e4fa;
@@ -59,7 +23,7 @@
   --header-bottom-spacer: 32px;
   --header-background-color: var(--identity-color-1);
   --title-color: var(--identity-color-2);
-  --slogan-color: var(--white);
+  --slogan-color: white;
 
   /* variables for between header and main content */
   --main-footer-gap: 64px;
@@ -133,9 +97,15 @@
 }
 
 .main-content {
-  width: 60%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+  .main-content {
+    width: 50%;
+  }
 }
 
 .main-content h3 {
@@ -176,7 +146,7 @@
 .footer-link:target {
   text-decoration: none;
   text-decoration-line: none;
-  color: var(--white);
+  color: white;
 }
 
 .imprint-top-spacer {
