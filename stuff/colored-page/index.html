@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A colored page.</title>
+    <link rel="stylesheet" href="/stuff/colored-page/style.css">
+    <script src="/stuff/colored-page/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/graphics/colored_page_logo.png">
+    <link rel="shortcut icon" sizes="196x196" href="/graphics/colored_page_logo.png">
+    <link rel="apple-touch-icon" href="/graphics/colored_page_logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="upperBorderSpacing"></div>
+    <form>
+      <div class="v-box" id="elements">
+        <div>
+          <h1>Colorize the screen however you want!</h1>
+        </div>
+        <div class="vertGiantSpacing"></div>
+        <div class="v-box">
+          <div class="h-box">
+            <div class="leftPadding"></div>
+            <div class="v-box">
+              <label class="label" id="redLabel">Red (0-255)</label>
+              <div class="vertSpacing"></div>
+              <input type="number" class="numberInput" id="redValue" value="0" min="0" max="255"></input>
+            </div>
+            <div class="horiSpacing"></div>
+            <div class="v-box">
+              <label class="label" id="greenLabel">Green (0-255)</label>
+              <div class="vertSpacing"></div>
+              <input type="number" class="numberInput" id="greenValue" value="0" min="0" max="255"></input>
+            </div>
+            <div class="horiSpacing"></div>
+            <div class="v-box">
+              <label class="label" id="blueLabel">Blue (0-255)</label>
+              <div class="vertSpacing"></div>
+              <input type="number" class="numberInput" id="blueValue" value="0" min="0" max="255"></input>
+            </div>
+            <div class="rightPadding"></div>
+          </div>
+          <div class="vertSpacing"></div>
+          <div>
+            <button type="submit" id="submitColor" onclick="setBGfromRGB(); return false;">Colorize</button>
+          </div>
+        </div>
+        <div class="vertPrettyLargeSpacing"></div>
+        <div class="v-box">
+          <div>
+            <label class="label" id="predefinedLabel">Or use any of these predefined colors:</label>
+          </div>
+          <div class="vertSpacing"></div>
+          <div>
+            <button style="background-color:#ffffff" type="submit" id="whiteColor" onclick="setBG('#ffffff'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#cccccc" type="submit" id="gray80Color" onclick="setBG('#cccccc'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#999999" type="submit" id="gray60Color" onclick="setBG('#999999'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#666666" type="submit" id="gray40Color" onclick="setBG('#666666'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#333333" type="submit" id="gray20Color" onclick="setBG('#333333'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#000000" type="submit" id="blackColor" onclick="setBG('#000000'); return false;">&nbsp;&nbsp;&nbsp;</button>
+          </div>
+          <div class="vertMiniSpacing"></div>
+          <div>
+            <button style="background-color:#ff0000" type="submit" id="redColor" onclick="setBG('#ff0000'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#ffff00" type="submit" id="yellowColor" onclick="setBG('#ffff00'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#00ff00" type="submit" id="greenColor" onclick="setBG('#00ff00'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#00ffff" type="submit" id="cyanColor" onclick="setBG('#00ffff'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#0000ff" type="submit" id="blueColor" onclick="setBG('#0000ff'); return false;">&nbsp;&nbsp;&nbsp;</button>
+            <button style="background-color:#ff00ff" type="submit" id="pinkColor" onclick="setBG('#ff00ff'); return false;">&nbsp;&nbsp;&nbsp;</button>
+          </div>
+        </div>
+        <div class="vertRidiculouslyLargeSpacing"></div>
+        <div>
+          <label class="label">F5 - Choose new color</label><br>
+          <div class="vertMiniSpacing"></div>
+          <label class="label">F11 - Fullscreen</label>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
+ 

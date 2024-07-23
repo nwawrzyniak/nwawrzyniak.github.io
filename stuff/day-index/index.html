@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Day index</title>
+    <link rel="stylesheet" href="/stuff/style.css">
+    <script src="/stuff/day-index/script.js"></script>
+    <link rel="shortcut icon" type="image/png" href="/graphics/hut_t_196.png">
+    <link rel="shortcut icon" sizes="196x196" href="/graphics/hut_t_196.png">
+    <link rel="apple-touch-icon" href="/graphics/hut_t_196.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <form>
+      <div class="v-box" id="elements">
+        <div class="h-box">
+          <div class="v-box">
+            <label class="label" id="dayLabel">Day</label>
+            <div class="vertSpacing"></div>
+            <input type="number" class="numberInput" id="dayValue" value="1" min="1" max="31"></input>
+          </div>
+          <div class="v-box">
+            <label class="label" id="monthLabel">Month</label>
+            <div class="vertSpacing"></div>
+            <input type="number" class="numberInput" id="monthValue" value="1" min="1" max="12"></input>
+          </div>
+          <div class="v-box">
+            <label class="label" id="yearLabel">Year</label>
+            <div class="vertSpacing"></div>
+            <input type="number" class="numberInput" id="yearValue" value="1990"></input>
+          </div>
+        </div>
+        <div>
+          <button type="button" id="submitButton" onclick="calcDayIndex();return false;">Calculate</button>
+        </div>
+        <div>
+          <label class="label" id="resultLabel"></label>
+        </div>
+        <div>
+          <label class="label" id="noteLabel"></label>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
+ 

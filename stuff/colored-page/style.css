@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+.v-box{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+.h-box{
+  display:flex;
+  justify-content:space-around;
+}
+.numberInput{
+  width:90px;
+}
+.vertMiniSpacing{
+  height:5px;
+}
+.vertSpacing{
+  height:10px;
+}
+.vertLargeSpacing{
+  height:25px;
+}
+.vertPrettyLargeSpacing{
+  height:40px;
+}
+.vertGiantSpacing{
+  height:50px;
+}
+.vertRidiculouslyLargeSpacing{
+  height:150px;
+}
+.upperBorderSpacing{
+  height:120px;
+}
+.horiSpacing{
+  width:10px;
+}
+.leftPadding{
+  padding-left:17px;
+}
+.rightPadding{
+  padding-right:10px;
+}
