@@ -1,18 +1,57 @@
-https://www.nwawsoft.com/
-https://www.nwawsoft.com/imprint/
-https://www.nwawsoft.com/de/
-https://www.nwawsoft.com/de/imprint/
-https://www.nwawsoft.com/nwju/
-https://www.nwawsoft.com/nwju/docs/
-https://www.nwawsoft.com/pwng/
-https://www.nwawsoft.com/kpt/
-https://www.nwawsoft.com/qc/
-https://www.nwawsoft.com/mtc/
-https://www.nwawsoft.com/start-at-the-beginning-chrome/
-https://www.nwawsoft.com/shorts-dont-loop-chrome/
-https://www.nwawsoft.com/haxe-fen/
-https://www.nwawsoft.com/shutdownplus/
-https://www.nwawsoft.com/stuff/
-https://www.nwawsoft.com/stuff/colored-page/
-https://www.nwawsoft.com/stuff/css-resolution/
-https://www.nwawsoft.com/stuff/day-index/
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.nwawsoft.com/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/imprint/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/de/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/de/imprint/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/nwju/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/nwju/docs/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/pwng/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/kpt/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/qc/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/mtc/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/start-at-the-beginning-chrome/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/shorts-dont-loop-chrome/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/haxe-fen/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/shutdownplus/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/stuff/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/stuff/colored-page/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/stuff/css-resolution/</loc>
+  </url>
+  <url>
+    <loc>https://www.nwawsoft.com/stuff/day-index/</loc>
+  </url>
+</urlset>
