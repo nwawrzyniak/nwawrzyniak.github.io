@@ -16,10 +16,17 @@
 </head>
 
 <body>
-  <div class="language-selection-box">
-    <a href="/imprint/"><img class="flag" src="/graphics/lang/american_flag.png" alt="English"></a>
-    <a href="/de/imprint/"><img class="flag" src="/graphics/lang/german_flag.png" alt="Deutsch"></a>
-  </div>
+  <nav>
+    <div class="language-selection-box">
+      <div class="language-dropdown">
+        <button class="language-toggle" type="button">Sprache</button>
+        <div class="dropdown-content">
+          <a href="/imprint/"><img class="flag american-flag" src="/graphics/lang/american_flag.png" width="122" height="64" alt="English"></a>
+          <a href="/de/imprint/"><img class="flag german-flag" src="/graphics/lang/german_flag.png" width="107" height="64" alt="Deutsch"></a>
+        </div>
+      </div>
+    </div>  
+  </nav>
   <div class="header">
     <h1><a class="title-name" href="/de/">nwawsoft</a></h1>
     <h2 class="title-slogan">Keine Firma. Trotzdem ganz passabler Code.</h2>
@@ -30,9 +37,11 @@
     <div class="imprint-element-spacer"></div>
     <p class="centered-text">nwawsoft ist ein nicht-kommerzielles Hobby-Projekt.</p>
   </div>
-  <div class="footer">
-    <p><a class="footer-link" href="/de/imprint/">Impressum</a></p>
-  </div>
+  <nav>
+    <div class="footer">
+      <p><a class="footer-link" href="/de/imprint/">Impressum</a></p>
+    </div>
+  </nav>
 </body>
 
 </html>
