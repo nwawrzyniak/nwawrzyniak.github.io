@@ -99,7 +99,7 @@ a:target {
   }
 
   .language-toggle {
-    background-color: #f9f9f9;
+    background: none;
     color: black;
     padding: 10px;
     font-size: 16px;
@@ -107,18 +107,16 @@ a:target {
     cursor: pointer;
   }
 
-  .language-toggle:hover {
-    background-color: #f1f1f1;
-  }
-
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: var(--identity-color-1);
+    min-width: 140px;
     z-index: 1;
-    right: 0;
+    right: -4px;
+    border: solid;
+    border-color: black;
+    border-width: 4px;
   }
 
   .dropdown-content a {
@@ -126,10 +124,6 @@ a:target {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-
-  .dropdown-content a:hover {
-    background-color: #f1f1f1;
   }
 
   .language-dropdown:hover .dropdown-content {
