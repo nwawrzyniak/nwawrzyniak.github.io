@@ -91,6 +91,17 @@
   width: auto;
 }
 
+.american-flag {
+  width: 122px;
+  height: var(--flag-height);
+}
+
+
+.german-flag {
+  width: 107px;
+  height: var(--flag-height);
+}
+
 .header {
   background: var(--header-background-color);
 }
