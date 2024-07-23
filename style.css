@@ -138,13 +138,8 @@ a:target {
 
   .flag {
     display: inline-block;
-    height: var(--flag-height);
-    width: auto;
-  }
-
-  .american-flag, .german-flag {
-    width: auto;
-    height: var(--flag-height);
+    width: 100%;
+    height: auto;
   }
 }
 
