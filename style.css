@@ -164,7 +164,6 @@ a:target {
 }
 
 @media (min-width: 440px) and (max-width: 575.98px) {
-
   .title-name,
   .title-name:visited,
   .title-name:active,
@@ -175,7 +174,6 @@ a:target {
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
-
   .title-name,
   .title-name:visited,
   .title-name:active,
@@ -186,7 +184,6 @@ a:target {
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
-
   .title-name,
   .title-name:visited,
   .title-name:active,
@@ -197,7 +194,6 @@ a:target {
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-
   .title-name,
   .title-name:visited,
   .title-name:active,
@@ -208,7 +204,6 @@ a:target {
 }
 
 @media (min-width: 1200px) {
-
   .title-name,
   .title-name:visited,
   .title-name:active,
