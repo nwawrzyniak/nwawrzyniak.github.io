@@ -1,6 +1,9 @@
 @font-face {
   font-family: "Lucida Grande";
   src: url("/fonts/Lucida-Grande-Regular-Font.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }
 
 /*
