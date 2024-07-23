@@ -44,7 +44,7 @@
   --white: #FFFFFF;
 
   /* General corporate identity settings */
-  --identity-color-1: #14b11c;
+  --identity-color-1: #116615;
   --identity-color-2: #0050e4fa;
 
   /* Variables for the language selection box in the upper right */
@@ -55,7 +55,7 @@
 
   /* Variables for the header */
   --title-font-size: 128px;
-  --slogan-font-size: 48px;
+  --slogan-font-size: 42px;
   --header-bottom-spacer: 32px;
   --header-background-color: var(--identity-color-1);
   --title-color: var(--identity-color-2);
@@ -112,9 +112,8 @@
 }
 
 .title-slogan {
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
   color: var(--slogan-color);
+  font-weight: normal;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -152,6 +151,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  height: 32px;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -165,7 +165,7 @@
 .footer-link:target {
   text-decoration: none;
   text-decoration-line: none;
-  color: var(--black);
+  color: var(--white);
 }
 
 .imprint-top-spacer {
