@@ -98,6 +98,8 @@
   align-items: center;
   text-decoration: none;
   font-size: var(--title-font-size-ultra-mini);
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 @media (min-width: 440px) and (max-width: 575.98px) {
