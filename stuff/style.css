@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+}
+
+.v-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.h-box {
+  display: flex;
+  flex-direction: row;
+}
+
+.horizontal-center {
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.number-input {
+  width: 64px;
+}
+
+.vert-mini-spacing {
+  height: 5px;
+}
+
+.vert-spacing {
+  height: 10px;
+}
+
+.vert-large-spacing {
+  height: 25px;
+}
+
+.hori-spacing {
+  width: 10px;
+}
+
+.left-pad-8 {
+  margin-left: 8px;
+}
+
+.left-pad-16 {
+  margin-left: 16px;
+}

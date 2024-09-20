@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex">
+  <title>Day index</title>
+  <link rel="stylesheet" href="/stuff/style.css">
+  <script src="/stuff/day-index/script.js"></script>
+  <link rel="shortcut icon" type="image/png" href="/graphics/hut_t_196.png">
+  <link rel="shortcut icon" sizes="196x196" href="/graphics/hut_t_196.png">
+  <link rel="apple-touch-icon" href="/graphics/hut_t_196.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="vert-spacing"></div>
+  <form class="full-width">
+    <div class="v-box gap-8">
+      <div class="h-box horizontal-center gap-8">
+        <div class="v-box center-text gap-8">
+          <label class="label" id="day-label">Day</label>
+          <input title="Day" type="number" class="number-input" id="day-value" value="1" min="1" max="31">
+        </div>
+        <div class="v-box center-text gap-8">
+          <label class="label" id="month-label">Month</label>
+          <input title="Month" type="number" class="number-input" id="month-value" value="1" min="1" max="12">
+        </div>
+        <div class="v-box center-text gap-8">
+          <label class="label" id="year-label">Year</label>
+          <input title="Year" type="number" class="number-input" id="year-value" value="1990">
+        </div>
+      </div>
+      <div class="v-box horizontal-center gap-8">
+        <button type="button" id="submit-button" onclick="calcDayIndex(); return false;">Calculate</button>
+        <label class="label" id="result-label"></label>
+        <label class="label" id="note-label"></label>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>

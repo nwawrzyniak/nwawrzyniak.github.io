@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+}
+
+button {
+  background: none;
+  background-color: none;
+}
+
+.v-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h-box {
+  display: flex;
+  justify-content: space-around;
+}
+
+.number-input {
+  width: 90px;
+}
+
+.vert-mini-spacing {
+  height: 5px;
+}
+
+.vert-spacing {
+  height: 10px;
+}
+
+.vert-large-spacing {
+  height: 25px;
+}
+
+.vert-pretty-large-spacing {
+  height: 40px;
+}
+
+.vert-giant-spacing {
+  height: 50px;
+}
+
+.vert-ridiculously-large-spacing {
+  height: 150px;
+}
+
+.upper-border-spacing {
+  height: 120px;
+}
+
+.hori-spacing {
+  width: 10px;
+}
+
+.left-padding {
+  padding-left: 17px;
+}
+
+.right-padding {
+  padding-right: 10px;
+}
+
+.white-color {
+  background-color: #ffffff
+}
+
+.gray-80-color {
+  background-color: #cccccc
+}
+
+.gray-60-color {
+  background-color: #999999
+}
+
+.gray-40-color {
+  background-color: #666666
+}
+
+.gray-20-color {
+  background-color: #333333
+}
+
+.black-color {
+  background-color: #000000
+}
+
+.red-color {
+  background-color: #ff0000
+}
+
+.yellow-color {
+  background-color: #ffff00
+}
+
+.green-color {
+  background-color: #00ff00
+}
+
+.cyan-color {
+  background-color: #00ffff
+}
+
+.blue-color {
+  background-color: #0000ff
+}
+
+.pink-color {
+  background-color: #ff00ff
+}
