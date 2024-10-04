@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /stuff/*
 
-Sitemap: https://www.nwawsoft.com/sitemap.xml
+Sitemap: https://nwawsoft.com/sitemap.xml
