@@ -29,6 +29,12 @@ button {
   justify-content: space-around;
 }
 
+h1 {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .centered-text {
   text-align: center;
 }
@@ -61,8 +67,28 @@ button {
   height: 150px;
 }
 
+.vert-ridiculously-large-flex-spacing {
+  height: 80px;
+}
+
+@media (min-width: 768px) {
+  .vert-ridiculously-large-flex-spacing {
+    height: 150px;
+  }
+}
+
 .upper-border-spacing {
   height: 120px;
+}
+
+.upper-border-flex-spacing {
+  height: 64px;
+}
+
+@media (min-width: 768px) {
+  .upper-border-flex-spacing {
+    height: 120px;
+  }
 }
 
 .hori-spacing {
