@@ -7,6 +7,17 @@ button {
   background-color: none;
 }
 
+
+#submit-color {
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 16px;
+  width: 180px;
+  height: 80px;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
 .v-box {
   display: flex;
   flex-direction: column;
