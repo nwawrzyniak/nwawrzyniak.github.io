@@ -18,6 +18,10 @@ button {
   justify-content: space-around;
 }
 
+.centered-text {
+  text-align: center;
+}
+
 .number-input {
   width: 90px;
 }

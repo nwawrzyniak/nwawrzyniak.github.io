@@ -1,5 +1,17 @@
-* {
+body {
   margin: 0;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.margin-a-p-0 > a > p {
+  margin: 0;
+}
+
+.line-height-a-p-1-5 > a > p {
+  line-height: 1.5;
 }
 
 .v-box {
@@ -23,12 +35,28 @@
   text-align: center;
 }
 
+.center-a-p > a > p {
+  text-align: center;
+}
+
 .gap-8 {
   gap: 8px;
 }
 
+.gap-16 {
+  gap: 16px;
+}
+
 .full-width {
   width: 100%;
+}
+
+.width-95 {
+  width: 95%;
+}
+
+.width-90 {
+  width: 90%;
 }
 
 .number-input {
