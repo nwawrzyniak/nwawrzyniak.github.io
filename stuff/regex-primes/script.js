@@ -8,10 +8,10 @@ const outputRegex = document.querySelector("#output-regex");
 const outputRegexPost = document.querySelector("#output-regex-post");
 const outputHuman = document.querySelector("#output-human-readable-text");
 inputField.value = Math.ceil(Math.random() * 1000);
+noJavascript.style.display = "none";
+requiresJavascript.style.display = "block";
 
 function checkPrime() {
-    noJavascript.style.display = "none";
-    requiresJavascript.style.display = "block";
     let n = inputField.value;
     if (n == "") n = 0;
     const comparator = '0'.repeat(n);
