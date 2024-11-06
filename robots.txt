@@ -1,4 +1,7 @@
 User-agent: *
-Disallow: /stuff/*
+Disallow: /stuff/
+Disallow: /stuff/colored-page/
+Disallow: /stuff/day-index/
+Disallow: /stuff/css-resolution/
 
 Sitemap: https://nwawsoft.com/sitemap.xml
