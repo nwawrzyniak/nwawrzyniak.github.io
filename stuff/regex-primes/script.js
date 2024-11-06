@@ -20,12 +20,12 @@ function checkPrime() {
     const comparator = '0'.repeat(n);
     outputRegex.innerHTML = comparator;
     outputRegexPost.innerHTML = "or any other string that consists of " + n + " times the same character.";
-    if (!regex.test(comparator)) {
-        outputRegexPre.innerHTML = "The regular expression " + colorCodedRegexInnerHTML + " <span class=\"prime\">does not match</span> the string";
-        outputHuman.innerHTML = "Therefore, " + n + " is a <span class=\"prime\">prime</span> number.";
-    } else {
+    if (regex.test(comparator)) {
         outputRegexPre.innerHTML = "The regular expression " + colorCodedRegexInnerHTML + " <span class=\"composite\">does match</span> the string";
         outputHuman.innerHTML = "Therefore, " + n + " is a <span class=\"composite\">composite</span> number.";
+    } else {
+        outputRegexPre.innerHTML = "The regular expression " + colorCodedRegexInnerHTML + " <span class=\"prime\">does not match</span> the string";
+        outputHuman.innerHTML = "Therefore, " + n + " is a <span class=\"prime\">prime</span> number.";
     }
 }
 
