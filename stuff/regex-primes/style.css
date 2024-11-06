@@ -1,15 +1,21 @@
 body {
+  margin: 0;
+}
+
+main {
   display: flex;
   flex-direction: column;
-  width: 95%;
   margin-left: auto;
   margin-right: auto;
   align-items: center;
   text-align: center;
+  width: 95%;
 }
 
 h1 {
   font-size: 8vw;
+  margin-top: 16px;
+  margin-bottom: 8px;
 }
 
 h2 {
@@ -35,4 +41,59 @@ label, input {
 
 input {
   text-align: center;
+}
+
+.small {
+  font-size: small;
+}
+
+.huge-top-margin {
+  margin-top: 120px;
+}
+
+.requires-javascript {
+  width: 90%;
+  display: none;
+  border: solid;
+  border-width: 2px;
+  border-radius: 8px;
+  border-color: black;
+  padding: 24px;
+}
+
+textarea {
+  width: 100% !important;
+  min-height: 80px;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: rgb(185, 185, 37);
+}
+
+.orange {
+  color: orange;
+}
+
+.grey {
+  color: grey;
+}
+
+.brown {
+  color: brown;
+}
+
+.blue {
+  color: blue;
+}
+
+.prime {
+  color: green;
+}
+
+.composite {
+  color: magenta;
 }
