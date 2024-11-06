@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /stuff/
 Disallow: /stuff/colored-page/
 Disallow: /stuff/day-index/
 Disallow: /stuff/css-resolution/
