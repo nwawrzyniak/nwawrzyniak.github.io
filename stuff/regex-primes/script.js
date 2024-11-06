@@ -9,7 +9,7 @@ const outputRegexPost = document.querySelector("#output-regex-post");
 const outputHuman = document.querySelector("#output-human-readable-text");
 do {
   inputField.value = Math.ceil(Math.random() * 1000); /* Sets a random initial number between 1 and 1000 to check */
-} while (inputField.value % 2 == 0 || inputField.value % 5 == 0); /* Ensures that the number is "interesting" (that it is odd and does not end with a 5) */
+} while (inputField.value % 2 == 0 || inputField.value % 10 == 5); /* Ensures that the number is "interesting" (that it is odd and does not end with a 5). The second part could simply be written as inputField.value % 5 == 0 but that would recheck numbers that end in a zero aswell. */
 
 noJavascript.style.display = "none";
 requiresJavascript.style.display = "block";
