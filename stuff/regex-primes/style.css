@@ -1,5 +1,9 @@
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  min-height: 100dvh;
+  justify-content: space-between;
 }
 
 main {
@@ -9,7 +13,8 @@ main {
   margin-right: auto;
   align-items: center;
   text-align: center;
-  width: 95%;
+  width: 98%;
+  padding-bottom: 64px;
 }
 
 h1 {
@@ -20,7 +25,7 @@ h1 {
 
 h2 {
   font-size: xx-large;
-  margin-bottom: 64px;
+  margin-bottom: 32px;
 }
 
 label {
@@ -29,6 +34,11 @@ label {
 
 label, p, input {
   font-size: xx-large;
+}
+
+p {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .input-elements {
@@ -47,18 +57,25 @@ input {
   font-size: small;
 }
 
-.huge-top-margin {
-  margin-top: 120px;
+.requires-javascript {
+  display: none;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.requires-javascript {
+.boxed {
   width: 90%;
-  display: none;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
   border: solid;
   border-width: 2px;
   border-radius: 8px;
   border-color: black;
-  padding: 24px;
+  padding: 16px;
 }
 
 textarea {
@@ -96,4 +113,20 @@ textarea {
 
 .composite {
   color: green;
+}
+
+.colored-regex-box {
+  display: inline-block;
+}
+
+#output-human-readable-text {
+  margin-bottom: 0px;
+}
+
+.bottom {
+  bottom: 0;
+  margin: 0;
+  width: 100%;
+  padding-bottom: 4px;
+  text-align: center;
 }
