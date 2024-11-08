@@ -137,7 +137,7 @@ textarea {
   flex-direction: row;
   flex-wrap: wrap;
   width: 95vw;
-  max-width: 100%; /* Is completely ignored and content overflows. Fix this! */
+  max-width: 100%;
 }
 
 #repeat-box > div {
