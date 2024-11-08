@@ -140,16 +140,17 @@ textarea {
   max-width: 100%; /* Is completely ignored and content overflows. Fix this! */
 }
 
-.composite-box {
+#repeat-box > div {
   border: solid;
   border-width: 1px;
+  word-break: break-all;
+}
+
+.composite-box {
   max-width: 100%;
 }
 
 .prime-box {
-  border: solid;
-  border-width: 1px;
-  word-break: break-all;
   text-align: left;
 }
 
