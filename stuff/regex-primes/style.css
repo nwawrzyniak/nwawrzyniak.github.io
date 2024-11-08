@@ -66,7 +66,8 @@ input {
 }
 
 .boxed {
-  width: 90%;
+  max-width: 90%;
+  width: 100%;
   flex-direction: column;
   justify-self: center;
   justify-content: center;
@@ -75,7 +76,7 @@ input {
   border-width: 2px;
   border-radius: 8px;
   border-color: black;
-  padding: 16px;
+  padding: 4px;
 }
 
 textarea {
@@ -129,4 +130,30 @@ textarea {
   width: 100%;
   padding-bottom: 4px;
   text-align: center;
+}
+
+#repeat-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 95vw;
+  max-width: 100%; /* Is completely ignored and content overflows. Fix this! */
+}
+
+.composite-box {
+  border: solid;
+  border-width: 1px;
+  max-width: 100%;
+}
+
+.prime-box {
+  border: solid;
+  border-width: 1px;
+  word-break: break-all;
+  text-align: left;
+}
+
+.mini-side-margin {
+  margin-left: 2px;
+  margin-right: 2px;
 }
