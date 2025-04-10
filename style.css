@@ -324,14 +324,21 @@ a:target {
 
 .footer {
   display: flex;
+  flex-direction: column;
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 32px;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   background: var(--identity-color-1);
+}
+
+#footer-links-p {
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 .footer-link,
@@ -342,6 +349,11 @@ a:target {
   text-decoration: none;
   text-decoration-line: none;
   color: white;
+}
+
+.copyright {
+  color: white;
+  font-size: 10px;
 }
 
 .imprint-top-spacer {
