@@ -171,7 +171,7 @@ function updateStitchedPreview() {
 
 // Download all sprites as a zip file
 async function downloadAllSprites() {
-  const zip = new JSZip();
+  const zip = new MinimalZip();
   // Determine number of digits for numbering
   const total = spritesArray.length * (spritesArray[0]?.length || 0);
   const digits = total > 0 ? Math.max(2, String(total - 1).length) : 2;
