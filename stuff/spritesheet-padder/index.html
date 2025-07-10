@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spritesheet Padder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Spritesheet Padder</h1>
+
+    <div class="input-group">
+      <label for="spritesheet">Upload Spritesheet:</label>
+      <input type="file" id="spritesheet" accept="image/*">
+    </div>
+
+    <div class="preview">
+      <img id="originalImage" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" class="original-image hidden" alt="Spritesheet Preview">
+    </div>
+
+    <div id="dimensions" class="input-group hidden">
+      <label>Grid Dimensions:</label>
+      <input type="number" id="columns" placeholder="Columns" min="1" value="4">
+      <input type="number" id="rows" placeholder="Rows" min="1" value="4">
+      <button id="cut-button" onclick="cutSprites()" type="button">Cut Sprites</button>
+    </div>
+
+    <div id="spritesContainer" class="sprites-grid"></div>
+
+    <div id="info" class="info hidden"></div>
+    <button id="downloadAllBtn" class="hidden download-sprites-zip-button" type="button">Download All Sprites (ZIP)</button>
+
+    <div id="paddingControls" class="input-group hidden">
+      <label>Padding (pixels):</label>
+      <div class="padding-inputs">
+        <label for="padTop">Top</label>
+        <input type="number" id="padTop" value="0">
+        <label for="padRight">Right</label>
+        <input type="number" id="padRight" value="0">
+        <label for="padBottom">Bottom</label>
+        <input type="number" id="padBottom" value="0">
+        <label for="padLeft">Left</label>
+        <input type="number" id="padLeft" value="0">
+      </div>
+    </div>
+
+    <div id="stitchedPreviewContainer" class="preview hidden">
+      <label><strong>Live Spritesheet:</strong></label><br>
+      <canvas id="stitchedPreview" class="stitched-preview-canvas"></canvas>
+      <br>
+      <button id="downloadStitchedBtn" class="download-stitched-btn" type="button">Download Spritesheet (PNG)</button>
+    </div>
+  </div>
+
+  <script src="jszip.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
