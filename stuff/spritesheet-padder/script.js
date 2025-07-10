@@ -172,27 +172,39 @@ function updateStitchedPreview() {
 // Download all sprites as a zip file
 async function downloadAllSprites() {
   const zip = new MinimalZip();
+  
   // Determine number of digits for numbering
   const total = spritesArray.length * (spritesArray[0]?.length || 0);
   const digits = total > 0 ? Math.max(2, String(total - 1).length) : 2;
+  
+  const promises = [];
   let idx = 0;
+  
   for (let row = 0; row < spritesArray.length; row++) {
     for (let col = 0; col < spritesArray[row].length; col++) {
       const spriteCanvas = spritesArray[row][col];
-      const dataUrl = spriteCanvas.toDataURL('image/png');
-      // Convert dataURL to binary
-      const base64 = dataUrl.split(',')[1];
-      const binary = atob(base64);
-      const array = new Uint8Array(binary.length);
-      for (let i = 0; i < binary.length; i++) {
-        array[i] = binary.charCodeAt(i);
-      }
-      // Name: 00.png, 01.png, ...
       const name = idx.toString().padStart(digits, '0') + '.png';
-      zip.file(name, array);
+      
+      // Create a promise for each sprite conversion
+      const promise = new Promise((resolve) => {
+        spriteCanvas.toBlob((blob) => {
+          // Convert blob to ArrayBuffer, then to Uint8Array
+          blob.arrayBuffer().then(arrayBuffer => {
+            const uint8Array = new Uint8Array(arrayBuffer);
+            zip.file(name, uint8Array);
+            resolve();
+          });
+        }, 'image/png');
+      });
+      
+      promises.push(promise);
       idx++;
     }
   }
+  
+  // Wait for all sprites to be processed
+  await Promise.all(promises);
+  
   // Generate zip and trigger download
   zip.generateAsync({ type: 'blob' }).then(function (content) {
     const a = document.createElement('a');
