@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frankenstein</title>
+  <meta name="description" content="The Sprite Merging Tool">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="https://nwawsoft.com/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://nwawsoft.com/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://nwawsoft.com/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://nwawsoft.com/favicon-48x48.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://nwawsoft.com/favicon-96x96.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://nwawsoft.com/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://nwawsoft.com/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://nwawsoft.com/android-chrome-512x512.png">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Frankenstein</h1>
+    <h2>The Sprite Merging Tool</h2>
+
+    <div class="upload-section">
+      <div class="upload-area" id="upload1">
+        <input type="file" id="file1" accept="image/*" title="Upload First Spritesheet">
+        <p>📁 Upload Spritesheet A</p>
+        <p>Click or drag & drop your first spritesheet here</p>
+        <p>Spritesheet A has a higher priority, which means that when a pixel is selected in both spritesheets its spritesheet A value will be used.</p>
+        <div id="preview1"></div>
+      </div>
+
+      <div class="upload-area" id="upload2">
+        <input type="file" id="file2" accept="image/*" title="Upload Second Spritesheet">
+        <p>📁 Upload Spritesheet B</p>
+        <p>Click or drag & drop your second spritesheet here</p>
+        <p>"Donator" spritesheet</p>
+        <div id="preview2"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="columns">Columns:</label>
+        <input type="number" id="columns" min="1" max="20" value="4">
+      </div>
+      <div class="control-group">
+        <label for="rows">Rows:</label>
+        <input type="number" id="rows" min="1" max="20" value="4">
+      </div>
+      <div class="control-group">
+        <button class="btn" id="processBtn" type="button" disabled>Process Sprites</button>
+      </div>
+    </div>
+
+    <div class="sprite-grid" id="spriteGrid">
+      <div class="sprite-section">
+        <h3>Spritesheet A</h3>
+        <div class="sprite-thumbnails" id="sprites1"></div>
+      </div>
+      <div class="sprite-section">
+        <h3>Spritesheet B</h3>
+        <div class="sprite-thumbnails" id="sprites2"></div>
+      </div>
+    </div>
+
+    <div id="editor-panel" class="editor-panel">
+      <div class="editor-section">
+        <h3>Sprite A</h3>
+        <div class="zoom-controls">
+          <button type="button" id="zoomOut1">-</button>
+          <input type="number" id="zoomLevel1" min="1" max="32" value="4" title="Zoom level for Sprite A" placeholder="Zoom">
+          <button type="button" id="zoomIn1">+</button>
+        </div>
+        <div class="canvas-container">
+          <canvas id="canvas1" class="editor-canvas"></canvas>
+        </div>
+        <div class="selection-controls">
+          <button class="selection-btn" id="select1" type="button">Select Areas</button>
+          <button class="selection-btn" id="pixel1" type="button">Single Pixel</button>
+          <button class="selection-btn" id="clear1" type="button">Clear Selection</button>
+        </div>
+      </div>
+
+      <div class="editor-section">
+        <h3>Sprite B</h3>
+        <div class="zoom-controls">
+          <button type="button" id="zoomOut2">-</button>
+          <input type="number" id="zoomLevel2" min="1" max="32" value="4" title="Zoom level for Sprite B" placeholder="Zoom">
+          <button type="button" id="zoomIn2">+</button>
+        </div>
+        <div class="canvas-container">
+          <canvas id="canvas2" class="editor-canvas"></canvas>
+        </div>
+        <div class="selection-controls">
+          <button class="selection-btn" id="select2" type="button">Select Areas</button>
+          <button class="selection-btn" id="pixel2" type="button">Single Pixel</button>
+          <button class="selection-btn" id="clear2" type="button">Clear Selection</button>
+        </div>
+      </div>
+
+      <div class="editor-section">
+        <h3>Live Preview</h3>
+        <div class="canvas-container">
+          <canvas id="previewCanvas" class="editor-canvas"></canvas>
+        </div>
+        <div class="selection-controls">
+          <button class="btn" id="finalizeBtn" type="button">Finalize Merge</button>
+          <button class="btn" id="skipBtn" type="button">Skip</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="conflict-resolution" id="conflictResolution">
+      <h3>⚠️ Pixel Conflict Resolution</h3>
+      <p class="conflict-text">Some pixels have conflicting selections. Choose how to handle them:</p>
+      <div class="conflict-options">
+        <button class="conflict-btn" id="useSprite1" type="button">Use Sprite 1</button>
+        <button class="conflict-btn" id="useSprite2" type="button">Use Sprite 2</button>
+        <button class="conflict-btn" id="useTransparent" type="button">Make Transparent</button>
+      </div>
+    </div>
+
+    <div class="individual-conflict-resolution" id="individualConflictResolution">
+      <h3>🔍 Individual Pixel Resolution</h3>
+      <div class="conflict-info">
+        <p id="conflictInfo">Pixel 1 of 5 (10, 15)</p>
+      </div>
+      
+      <div class="conflict-preview">
+        <canvas id="conflictPreviewCanvas" class="conflict-preview-canvas"></canvas>
+        <div class="pixel-values">
+          <div class="pixel-value">
+            <strong>Sprite A:</strong> <span id="sprite1Pixel">RGBA(255, 255, 255, 255)</span>
+          </div>
+          <div class="pixel-value">
+            <strong>Sprite B:</strong> <span id="sprite2Pixel">RGBA(0, 0, 0, 255)</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="conflict-options">
+        <button class="conflict-btn" id="individualUseSprite1" type="button">Use Sprite A color</button>
+        <button class="conflict-btn" id="individualUseSprite2" type="button">Use Sprite B color</button>
+        <button class="conflict-btn" id="individualUseTransparent" type="button">Make Transparent</button>
+        <button class="conflict-btn" id="pickColorBtn" type="button">Pick Color...</button>
+        <input type="color" id="color-picker" class="hidden" title="Choose pixel color">
+      </div>
+    </div>
+
+    <div id="completedSprites" class="completed-sprites hidden">
+      <h3>✅ Completed Sprites</h3>
+      <div class="completed-grid"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
