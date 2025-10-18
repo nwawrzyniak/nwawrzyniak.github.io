@@ -4,59 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pizza Flächen Vergleich</title>
+  <title>Pizza Flächen- und Preisvergleich</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
   <div class="container">
-    <h1>🍕 Pizza Flächen Vergleich 🍕</h1>
-
+    <h1>🍕 Pizza Flächen- und Preisvergleich 🍕</h1>
     <div class="sides-container">
       <div class="side">
         <h2>Seite A</h2>
         <div class="price-input">
-          <label>Preis:</label>
-          <input type="number" id="priceA" value="15" min="0" step="0.01" oninput="calculate()">
+          <label for="priceA">Preis:</label>
+          <input type="number" id="priceA" value="15" min="0" step="0.01" oninput="calculate()" title="Preis Seite A">
           <span>€</span>
         </div>
         <div id="sideA-pizzas"></div>
-        <button class="add-btn" onclick="addPizza('A')">+ Pizza hinzufügen</button>
+        <button class="add-btn" onclick="addPizza('A')" type="button">+ Pizza hinzufügen</button>
       </div>
-
       <div class="vs">VS</div>
-
       <div class="side">
         <h2>Seite B</h2>
         <div class="price-input">
-          <label>Preis:</label>
-          <input type="number" id="priceB" value="12" min="0" step="0.01" oninput="calculate()">
+          <label for="priceB">Preis:</label>
+          <input type="number" id="priceB" value="12" min="0" step="0.01" oninput="calculate()" title="Preis Seite B">
           <span>€</span>
         </div>
         <div id="sideB-pizzas"></div>
-        <button class="add-btn" onclick="addPizza('B')">+ Pizza hinzufügen</button>
+        <button class="add-btn" onclick="addPizza('B')" type="button">+ Pizza hinzufügen</button>
       </div>
     </div>
-
     <div class="visualization">
       <div class="viz-container">
         <div>
           <div class="pizza-display" id="displayA"></div>
           <div class="side-info" id="infoA"></div>
         </div>
-
         <div class="vs">VS</div>
-
         <div>
           <div class="pizza-display" id="displayB"></div>
           <div class="side-info" id="infoB"></div>
         </div>
       </div>
     </div>
-
     <div class="result" id="result"></div>
   </div>
-
   <script src="script.js"></script>
 </body>
 
