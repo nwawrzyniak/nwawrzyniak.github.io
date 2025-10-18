@@ -30,8 +30,8 @@ h1 {
 .sides-container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 30px;
-  margin-bottom: 40px;
+  gap: 8px;
+  margin-bottom: 16px;
   align-items: start;
 }
 
@@ -139,7 +139,7 @@ input#priceB {
 
 .visualization {
   background: #f8f9fa;
-  padding: 30px;
+  padding: 8px;
   border-radius: 15px;
   margin-bottom: 30px;
 }
@@ -147,7 +147,7 @@ input#priceB {
 .viz-container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 30px;
+  gap: 8px;
   align-items: center;
 }
 
@@ -227,7 +227,7 @@ input#priceB {
 
   .vs {
     text-align: center;
-    margin: 20px 0;
+    margin: 8px 0;
   }
 
   .viz-container {
