@@ -37,12 +37,12 @@ h1 {
 
 input#priceA,
 input#priceB {
-    width: 180px;
+  width: 110px;
 }
 
 .side {
   background: #f8f9fa;
-  padding: 25px;
+  padding: 8px;
   border-radius: 15px;
 }
 
