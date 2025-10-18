@@ -35,6 +35,11 @@ h1 {
   align-items: start;
 }
 
+input#priceA,
+input#priceB {
+    width: 180px;
+}
+
 .side {
   background: #f8f9fa;
   padding: 25px;
