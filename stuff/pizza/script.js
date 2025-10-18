@@ -86,7 +86,7 @@ function calculate() {
 
   displayA.innerHTML = pizzenA.map((d, i) => `
                 <div style="position: relative;">
-                    <div class="pizza" style="width: ${d * scale}px; height: ${d * scale}px;">
+                    <div class="pizza" style="width: ${d * scale *2}px; height: ${d * scale *2}px;">
                         <div class="pizza-label">${d}cm</div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ function calculate() {
 
   displayB.innerHTML = pizzenB.map((d, i) => `
                 <div style="position: relative;">
-                    <div class="pizza" style="width: ${d * scale}px; height: ${d * scale}px;">
+                    <div class="pizza" style="width: ${d * scale * 2}px; height: ${d * scale * 2}px;">
                         <div class="pizza-label">${d}cm</div>
                     </div>
                 </div>
