@@ -14,43 +14,34 @@
     <div class="sides-container">
       <div class="side">
         <h2>Kombination 1</h2>
-
         <div class="price-mode">
           <label><input type="radio" name="priceModeA" value="combo" checked onchange="togglePriceMode('A')"> Preis pro Kombination</label>
           <label><input type="radio" name="priceModeA" value="individual" onchange="togglePriceMode('A')"> Preis pro Pizza</label>
         </div>
-
         <div class="price-input combo-price">
           <label for="priceA">Preis:</label>
           <input type="number" id="priceA" value="17.98" min="0" step="0.01" oninput="calculate()" title="Preis Kombination 1">
           <span>€</span>
         </div>
-
         <div id="sideA-pizzen"></div>
-        <button class="add-btn" onclick="addPizzaA()" type="button">+ Pizza hinzufügen</button>
+        <button class="add-btn" onclick="addPizza('A')" type="button">+ Pizza hinzufügen</button>
       </div>
-
       <div class="vs">VS</div>
-
       <div class="side">
         <h2>Kombination 2</h2>
-
         <div class="price-mode">
           <label><input type="radio" name="priceModeB" value="combo" checked onchange="togglePriceMode('B')"> Preis pro Kombination</label>
           <label><input type="radio" name="priceModeB" value="individual" onchange="togglePriceMode('B')"> Preis pro Pizza</label>
         </div>
-
         <div class="price-input combo-price">
           <label for="priceB">Preis:</label>
           <input type="number" id="priceB" value="18.99" min="0" step="0.01" oninput="calculate()" title="Preis Kombination 2">
           <span>€</span>
         </div>
-
         <div id="sideB-pizzen"></div>
-        <button class="add-btn" onclick="addPizzaB()" type="button">+ Pizza hinzufügen</button>
+        <button class="add-btn" onclick="addPizza('B')" type="button">+ Pizza hinzufügen</button>
       </div>
     </div>
-
     <div class="visualization">
       <div class="viz-container">
         <div>

@@ -2,13 +2,12 @@ let pizzenA = [{ diameter: 24, price: 8.99 }, { diameter: 30, price: 10.99 }];
 let pizzenB = [{ diameter: 36, price: 12.99 }];
 let priceMode = { A: 'combo', B: 'combo' };
 
-function addPizzaA() {
-  pizzenA.push(createNewPizza());
-  render();
-}
-
-function addPizzaB() {
-  pizzenB.push(createNewPizza());
+function addPizza(side) {
+  if (side === 'A') {
+    pizzenA.push(createNewPizza());
+  } else {
+    pizzenB.push(createNewPizza());
+  }
   render();
 }
 
@@ -52,9 +51,9 @@ function render() {
                oninput="updatePizza('${side}', ${i}, 'diameter', this.value)">
         <span>cm</span>
         ${priceMode[side] === 'individual'
-          ? `<input type="number" value="${p.price}" min="0" step="0.01" placeholder="Preis (€)" 
+        ? `<input type="number" value="${p.price}" min="0" step="0.01" placeholder="Preis (€)" 
                      oninput="updatePizza('${side}', ${i}, 'price', this.value)">€`
-          : ''}
+        : ''}
         ${pizzas.length > 1 ? `<button class="remove-btn" onclick="removePizza('${side}', ${i})">×</button>` : ''}
       </div>
     `).join('');
