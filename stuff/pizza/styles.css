@@ -27,6 +27,18 @@ h1 {
   font-size: 2em;
 }
 
+.price-mode {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.price-mode input {
+  margin-right: 4px;
+}
+
 .sides-container {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
