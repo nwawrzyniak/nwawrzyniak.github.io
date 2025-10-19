@@ -1,12 +1,13 @@
 let pizzenA = [26, 26];
 let pizzenB = [36];
 
-function addPizza(side) {
-  if (side === 'A') {
-    pizzenA.push(30);
-  } else {
-    pizzenB.push(30);
-  }
+function addPizzaA() {
+  pizzenA.push(30);
+  render();
+}
+
+function addPizzaB() {
+  pizzenB.push(30);
   render();
 }
 
@@ -34,30 +35,20 @@ function render() {
   const sideBDiv = document.getElementById('sideB-pizzen');
 
   sideADiv.innerHTML = pizzenA.map((diameter, i) => `
-                <div class="pizza-input">
-                    <input type="number" 
-                           value="${diameter}" 
-                           min="1" 
-                           max="100" 
-                           placeholder="Durchmesser (cm)"
-                           oninput="updatePizza('A', ${i}, this.value)">
-                    <span>cm</span>
-                    ${pizzenA.length > 1 ? `<button class="remove-btn" onclick="removePizza('A', ${i})">×</button>` : ''}
-                </div>
-            `).join('');
+    <div class="pizza-input">
+      <input type="number" value="${diameter}" min="1" max="100" placeholder="Durchmesser (cm)" oninput="updatePizza('A', ${i}, this.value)">
+      <span>cm</span>
+      ${pizzenA.length > 1 ? `<button class="remove-btn" onclick="removePizza('A', ${i})">×</button>` : ''}
+    </div>
+    `).join('');
 
   sideBDiv.innerHTML = pizzenB.map((diameter, i) => `
-                <div class="pizza-input">
-                    <input type="number" 
-                           value="${diameter}" 
-                           min="1" 
-                           max="100" 
-                           placeholder="Durchmesser (cm)"
-                           oninput="updatePizza('B', ${i}, this.value)">
-                    <span>cm</span>
-                    ${pizzenB.length > 1 ? `<button class="remove-btn" onclick="removePizza('B', ${i})">×</button>` : ''}
-                </div>
-            `).join('');
+    <div class="pizza-input">
+      <input type="number" value="${diameter}" min="1" max="100" placeholder="Durchmesser (cm)" oninput="updatePizza('B', ${i}, this.value)">
+      <span>cm</span>
+      ${pizzenB.length > 1 ? `<button class="remove-btn" onclick="removePizza('B', ${i})">×</button>` : ''}
+    </div>
+  `).join('');
 
   calculate();
 }
@@ -86,7 +77,7 @@ function calculate() {
 
   displayA.innerHTML = pizzenA.map((d, i) => `
                 <div style="position: relative;">
-                    <div class="pizza" style="width: ${d * scale *2}px; height: ${d * scale *2}px;">
+                    <div class="pizza" style="width: ${d * scale * 2}px; height: ${d * scale * 2}px;">
                         <div class="pizza-label">${d}cm</div>
                     </div>
                 </div>
@@ -128,28 +119,28 @@ function calculate() {
 
   // Flächenvergleich
   if (totalA > totalB) {
-    areaWinner = `<div>🍕 <strong>Seite A</strong> hat ${percentDiff}% mehr Pizza (${difference.toFixed(0)} cm² mehr)</div>`;
+    areaWinner = `<div>🍕 <strong>Kombination 1</strong> hat ${percentDiff}% mehr Pizza (${difference.toFixed(0)} cm² mehr)</div>`;
   } else if (totalB > totalA) {
-    areaWinner = `<div>🍕 <strong>Seite B</strong> hat ${percentDiff}% mehr Pizza (${difference.toFixed(0)} cm² mehr)</div>`;
+    areaWinner = `<div>🍕 <strong>Kombination 2</strong> hat ${percentDiff}% mehr Pizza (${difference.toFixed(0)} cm² mehr)</div>`;
   } else {
-    areaWinner = `<div>🍕 Beide Seiten haben gleich viel Pizza (${totalA.toFixed(0)} cm²)</div>`;
+    areaWinner = `<div>🍕 Beide Kombinationen haben gleich viel Pizza (${totalA.toFixed(0)} cm²)</div>`;
   }
 
   // Preis-Leistungs-Verhältnis
   if (pricePerCm2A < pricePerCm2B) {
     const saving = ((pricePerCm2B - pricePerCm2A) / pricePerCm2B * 100).toFixed(1);
-    priceWinner = `<div>💰 <strong>Seite A</strong> ist ${saving}% günstiger pro cm²</div>`;
+    priceWinner = `<div>💰 <strong>Kombination 1</strong> ist ${saving}% günstiger pro cm²</div>`;
   } else if (pricePerCm2B < pricePerCm2A) {
     const saving = ((pricePerCm2A - pricePerCm2B) / pricePerCm2A * 100).toFixed(1);
-    priceWinner = `<div>💰 <strong>Seite B</strong> ist ${saving}% günstiger pro cm²</div>`;
+    priceWinner = `<div>💰 <strong>Kombination 2</strong> ist ${saving}% günstiger pro cm²</div>`;
   } else {
-    priceWinner = `<div>💰 Beide Seiten haben das gleiche Preis-Leistungs-Verhältnis</div>`;
+    priceWinner = `<div>💰 Beide Kombinationen haben das gleiche Preis-Leistungs-Verhältnis</div>`;
   }
 
   resultText = `
                 <div style="margin-bottom: 15px;">
-                    <div><strong>Seite A:</strong> ${totalA.toFixed(0)} cm² für ${priceA.toFixed(2)}€</div>
-                    <div><strong>Seite B:</strong> ${totalB.toFixed(0)} cm² für ${priceB.toFixed(2)}€</div>
+                    <div><strong>Kombination 1:</strong> ${totalA.toFixed(0)} cm² für ${priceA.toFixed(2)}€</div>
+                    <div><strong>Kombination 2:</strong> ${totalB.toFixed(0)} cm² für ${priceB.toFixed(2)}€</div>
                 </div>
                 <div class="winner">
                     ${areaWinner}
