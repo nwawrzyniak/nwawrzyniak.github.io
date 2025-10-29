@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPv4 to Binary Converter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>IPv4 to Binary Converter</h1>
+      <p class="subtitle">
+        Convert any IPv4 address to its binary representation
+      </p>
+
+      <div class="input-group">
+        <label for="ipAddress">Enter IPv4 Address:</label>
+        <input
+          type="text"
+          id="ipAddress"
+          placeholder="e.g., 192.168.1.1"
+          autocomplete="off"
+        />
+        <div class="error-message" id="errorMessage">
+          Please enter a valid IPv4 address
+        </div>
+      </div>
+
+      <div class="result" id="result">
+        <h2>Binary Representation</h2>
+        <div id="octetsContainer"></div>
+        <div class="full-binary">
+          <div class="octet-label">Full Binary:</div>
+          <div class="full-binary-value" id="fullBinary"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./ipv4.js"></script>
+  </body>
+</html>
