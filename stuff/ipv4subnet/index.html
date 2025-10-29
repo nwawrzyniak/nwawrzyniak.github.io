@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPv4 Network/Host Calculator</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>IPv4 Network/Host Calculator</h1>
+
+      <div class="input-group">
+        <label for="ipAddress">IPv4 Address:</label>
+        <input
+          type="text"
+          id="ipAddress"
+          placeholder="e.g., 192.168.1.10"
+          value="192.168.1.10"
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="subnetMask">Subnet Mask:</label>
+        <input
+          type="text"
+          id="subnetMask"
+          placeholder="e.g., 255.255.255.0"
+          value="255.255.255.0"
+        />
+      </div>
+
+      <button onclick="calculate()">Calculate</button>
+
+      <div class="results" id="results"></div>
+    </div>
+    <script src="./ipv4subnet.js"></script>
+  </body>
+</html>
